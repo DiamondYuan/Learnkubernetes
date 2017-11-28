@@ -6,3 +6,5 @@ for node in ${nodes[@]}
 do
    echo "User entered node :" \"$node\",
 done
+
+bash install_edct.sh
