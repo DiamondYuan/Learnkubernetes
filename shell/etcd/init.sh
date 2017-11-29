@@ -26,6 +26,11 @@ if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]; then
 
 	bash install_etcd.sh
 	bash etcd_config.sh ${names[$index]} ${nodes[$index]} ${initial_cluster}
+	bash create_edct_service.sh
+	systemctl daemon-reload
+	systemctl enable etcd
+	systemctl start etcd
+	systemctl status etcd
 
 else
 
