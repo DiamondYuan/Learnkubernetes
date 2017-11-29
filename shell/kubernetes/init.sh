@@ -1,0 +1,1 @@
+bash install_kubernets.sh
